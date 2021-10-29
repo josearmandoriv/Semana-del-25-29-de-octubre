@@ -1,0 +1,26 @@
+#include <conio.h>
+#include <stdio.h> 
+int search (double vector[], int N, double dato);
+int main ()
+{
+	 double v[]={8, 23, 78, 8, 32, 56};
+	 int i;
+	 for (i=0;i<6;i++){
+	 	printf("%f", v[i]);
+	 	search; 
+	 }
+	 getch();
+	 return 0;
+}  
+// Búsqueda lineal de un elemento en un vector
+// - Devuelve la posición de “dato” en el vector
+// - Si “dato” no está en el vector, devuelve -1
+int search (double v[], int N, double dato)
+{
+int i;
+int pos = -1;
+for (i=0; (i<N) && (pos==-1); i++)
+if (v[i]==dato)
+pos = i;
+return pos;
+}
