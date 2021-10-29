@@ -1,0 +1,26 @@
+#include <stdio.h> 
+#include <stdio.h> 
+#include <conio.h>
+void OrdenarInsercion(double v[ ], int N);
+int main ()
+{
+	 double v[]={8, 23, 78, 8, 32, 56};
+	 int i;
+	 for (i=0;i<6;i++){
+	 	printf("%f", v[i]);
+	 	OrdenarInsercion(v, 6); 
+	 }
+	 getch();
+	 return 0;
+}  
+void OrdenarInsercion (double v[], int N)
+{
+int i, j;
+double tmp;
+for (i=1; i<N; i++) {
+tmp = v[i];
+for (j=i; (j>0) && (tmp<v[j-1]); j--)
+v[j] = v[j-1];
+v[j] = tmp;
+}
+}
