@@ -1,0 +1,26 @@
+#include <conio.h>
+#include <stdio.h> 
+void OrdenarBurbuja (double v[ ], int N);
+int main ()
+{
+	 double v[]={8, 23, 78, 8, 32, 56};
+	 int i;
+	 for (i=0;i<6;i++){
+	 	printf("%f", v[i]);
+	 	OrdenarBurbuja(v, 6); 
+	 }
+	 getch();
+	 return 0;
+}  
+void OrdenarBurbuja (double v[], int N)
+{
+int i, j;
+double tmp;
+for (i=1; i<N; i++)
+for (j=N-1; j>i; j--)
+if (v[j] < v[j-1]) {
+tmp = v[j];
+v[j] = v[j-1];
+v[j-1] = tmp;
+}
+}
